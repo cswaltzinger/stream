@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+  </head>
+  <body style="background-color:black;">
+    <script type="text/javascript">
+      function win(url){
+        var originalArgs = 'width=1500,height=850,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes,titlebar=no';
+
+        var args = 'location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes';
+        var ag = 'toolbar=no'
+        window.open(url, '', originalArgs);
+      }
+      var i = window.location.search
+
+      if (i.includes("hbo")) {
+        win('https://play.hbomax.com/profileSelect');
+      }else if (i.includes("peacock")) {
+        win('https://www.peacocktv.com/watch/home');
+      }else if (i.includes("dis")) {
+        win('https://www.disneyplus.com/login');
+      }else if (i.includes("net")) {
+        win('https://www.netflix.com/browse');
+      }else if(i.includes("xf")){
+        win("https://www.xfinity.com/stream/");
+      }else if(i.includes("fmi")){
+        win("https://www.icloud.com/find/");
+      }else if(i.includes("you")){
+        win("https://www.youtube.com");
+      }
+
+      window.close();
+
+    </script>
+
+  </body>
+</html>
